@@ -1,6 +1,9 @@
 {
   "name": "biscoff-starter",
   "version": "1.0.0",
+  "engine": {
+    "node": "12.18.3"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
