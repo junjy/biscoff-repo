@@ -3,6 +3,11 @@ const ProductModel = require('../models/products')
 const ProductRatingModel = require('../models/product_ratings')
 
 const controllers = {
+    redirectToMain: (req, res) => {
+        res.redirect('/products')
+        return
+
+    },
 
     listProducts: (req, res) => {
         // using the promise way
@@ -167,11 +172,6 @@ const controllers = {
                 console.log(err)
                 res.redirect('/products')
             })
-    },
-
-    redirectToMain: (res, req) => {
-        res.redirect('/products')
-
     }
 
 }

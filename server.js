@@ -36,7 +36,7 @@ app.use(setUserVarMiddleware)
 // ====== PRODUCTS ROUTES ====== 
 
 // redirect main index to products
-app.get('/index', productsController.redirectToMain)
+app.get('', productsController.redirectToMain)
 
 // index route
 app.get('/products', productsController.listProducts)
