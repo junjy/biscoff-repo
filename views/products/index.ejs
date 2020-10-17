@@ -1,0 +1,27 @@
+<%- include('../partials/header'); %>
+
+    <h1><%= pageTitle %></h1>
+
+    <ul>
+        <% bakegoods.forEach( (item, idx) => { %>
+            <li class="mb-5">
+                <p>
+                    <a href="/products/<%= item.slug %>"><%= 'Name: ' + item.name %></a>
+                </p>
+                <p>
+                    <%= 'Price: ' + item.price %>
+                </p>
+
+                <div class="action-buttons">
+                    <a class="btn btn-primary" href="/products/<%= item.slug %>/edit">Edit</a>
+                    |
+                    <form method="POST" action="/products/<%= item.slug %>?_method=DELETE">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+
+<%- include('../partials/footer'); %>
+    

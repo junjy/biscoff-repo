@@ -1,0 +1,28 @@
+<%- include('../partials/header'); %>
+
+    <h1><%= pageTitle %></h1>
+
+    <article>
+        <p>Name: <%= item.name %></p>
+        <p>Price: <%= item.price %></p>
+        <p>
+            <a class="btn btn-primary" href="/products/<%= item.slug %>/ratings/new">Give Rating</a>
+        </p>
+        <p>
+            <img src="<%= item.image %>" />
+        </p>
+    </article>
+
+    <section id="product-ratings">
+        <ul>
+            <% ratings.forEach(item => { %>
+                <li>
+                    <p>Rating: <%= item.rating %></p>
+                    <p>Comment: <%= item.comment %></p>
+                    <p>Comment Date: <%= item.created_at %></p>
+                </li>
+            <% }) %> 
+        </ul>
+    </section>
+
+<%- include('../partials/footer'); %>

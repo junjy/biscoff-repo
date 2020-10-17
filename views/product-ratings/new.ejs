@@ -1,0 +1,29 @@
+<%- include('../partials/header'); %>
+    
+    <div class="container">
+
+        <h1><%= pageTitle + " for " + product.name %></h1>
+
+        <form method="POST" action="/products/<%= product.slug %>/ratings">
+            <div class="form-group">
+                <label for="rating">Select Rating</label>
+                <select class="form-control" id="rating" name="rating">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Comment</label>
+                <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+<%- include('../partials/footer'); %>
