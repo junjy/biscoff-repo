@@ -167,6 +167,11 @@ const controllers = {
                 console.log(err)
                 res.redirect('/products')
             })
+    },
+
+    redirectToMain: (res, req) => {
+        res.redirect('/products')
+
     }
 
 }
